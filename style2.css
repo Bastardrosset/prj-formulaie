@@ -1,0 +1,613 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Style+Script&display=swap");
+* {
+  font-family: "Dancing Script", cursive;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+.video {
+  z-index: -1;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 7rem;
+  text-shadow: 0.2rem 0.2rem 0.9rem rgb(255, 255, 255);
+}
+h1 .accueil {
+  margin-bottom: 2rem;
+}
+/*************** Formulaire Identifiant ***************/
+.inscription_formulaire-identication {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blur {
+  border: 1px solid rgb(211, 211, 211);
+  box-shadow: inset 0rem 0.1rem 0rem rgba(0, 0, 0, 0.39),
+    inset 0.1rem 0rem 0rem rgba(0, 0, 0, 0.39),
+    inset -0.1rem 0rem 0rem rgba(0, 0, 0, 0.39),
+    inset 0rem -0.1rem 0rem rgba(0, 0, 0, 0.39);
+  width: 100%;
+  border-radius: 0.5rem;
+  backdrop-filter: blur(0.5rem);
+  width: 80%;
+  height: auto;
+  overflow: hidden;
+}
+.blur::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  background: rgba(157, 115, 255, 0.219);
+  pointer-events: none;
+  transform: skewX(-25deg);
+  box-shadow: -20rem 0rem 20rem 20px rgb(157 115 255 / 40%);
+  z-index: -1;
+}
+.child {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 100%;
+}
+.div1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.div2 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.div3 {
+  grid-area: 2 / 1 / 3 / 3;
+}
+.div4 {
+  grid-area: 3 / 1 / 4 / 3;
+}
+.div5 {
+  grid-area: 4 / 1 / 5 / 3;
+}
+.div6 {
+  grid-area: 5 / 1 / 6 / 3;
+}
+.div1,
+.div2,
+.div3,
+.div4,
+.div5,
+.div6 {
+  text-align: center;
+}
+h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+form .div1 #Identifiant,
+form .div2 #password {
+  margin-top: 4rem;
+  width: 14rem;
+  height: 3rem;
+  padding-left: 0.2rem;
+}
+.div1 .fas,
+.div2 .fas {
+  position: absolute;
+  top: 10.3rem;
+}
+.div1 .fas {
+  padding-left: 13rem;
+}
+.div2 .fas {
+  padding-left: 12.7rem;
+}
+form .div1 #Identifiant:focus,
+form .div2 #password:focus {
+  border: 0.2rem solid pink;
+}
+form .div3 {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.div4 a {
+  color: black;
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+}
+.div6 {
+  margin-top: 1rem;
+}
+.div6 a {
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+.div4 a:hover,
+.div6 a:hover {
+  color: aliceblue;
+  transition: 0.4s ease;
+}
+.div5 input[type="submit"] {
+  margin-top: 1rem;
+  padding: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+input[type="submit"]:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease;
+  background-color: grey;
+  color: aliceblue;
+}
+@media all and (max-width: 955px) {
+  .child {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+  .div1 {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .div2 {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  .div3 {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  .div4 {
+    grid-area: 4 / 1 / 5 / 2;
+  }
+  .div5 {
+    grid-area: 5 / 1 / 6 / 2;
+  }
+  .div6 {
+    grid-area: 6 / 1 / 7 / 2;
+  }
+  .div5 {
+  }
+  .div6 {
+  }
+  .div2 .fas {
+    position: absolute;
+    top: 17.3rem;
+  }
+  .div1 .fas {
+    margin-left: -0.2rem;
+  }
+  .div2 .fas {
+    margin-left: -0.4rem;
+  }
+}
+/**************** Footer page d'accueil ***************/
+#accueil {
+  position: relative;
+  margin-top: 100px;
+  height: 5rem;
+  background: rgba(128, 128, 128, 0.534);
+}
+#accueil ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+#accueil ul li {
+  position: relative;
+  list-style-type: none;
+  font-size: 2.5rem;
+  color: rgba(0, 0, 0, 0.418);
+}
+#accueil ul li i {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+footer ul li i:hover {
+  background: var(--btn);
+  border: 0px;
+  box-shadow: 0 0 2px var(--btn), 0 0 4px var(--btn), 0 0 8px var(--btn),
+    0 0 20px var(--btn);
+}
+/******************** Formulaire d'Inscription *******************/
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+.inscription {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.formulaire_inscription {
+  width: 70%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(0.5rem);
+}
+.creation-compte {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+fieldset {
+  border-radius: 0.5rem;
+}
+legend {
+  margin-left: 2rem;
+  padding-left: 1rem;
+  font-size: 1.3rem;
+  font-weight: bolder;
+}
+.parent {
+  font-size: 1.3rem;
+  width: 100%;
+  height: 50vh;
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.div7 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.div8 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.div9 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.div10 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+.div11 {
+  grid-area: 3 / 1 / 4 / 2;
+}
+.div12 {
+  grid-area: 3 / 2 / 4 / 3;
+}
+.div13 {
+  grid-area: 4 / 1 / 5 / 2;
+}
+.div14 {
+  grid-area: 4 / 2 / 5 / 3;
+}
+.div15 {
+  grid-area: 5 / 1 / 6 / 3;
+}
+.div16 {
+  grid-area: 6 / 1 / 7 / 3;
+}
+.div15,
+.div16 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.div9 label,
+.div13 label {
+  padding: 1rem;
+}
+.div10 label {
+  margin-left: 1rem;
+}
+
+.div10 #F,
+.div10 #H {
+  margin-left: 0.5rem;
+}
+.div7 #nom,
+.div8 #prenom,
+.div9 #age,
+.div13 #pays {
+  margin: 1.3rem;
+}
+.div7 #nom,
+.div8 #prenom,
+.div11 #adresse,
+.div12 #codepostal,
+.div14 #email {
+  height: 2rem;
+}
+.div9 #age {
+  width: 3rem;
+}
+.div12 #codepostal {
+  width: 6rem;
+}
+.div13 #pays {
+  margin-top: -1.6rem;
+}
+.div14 #email {
+  width: 12rem;
+}
+.div16 #votre-message {
+  margin-bottom: 5rem;
+}
+input,
+#pays,
+optgroup,
+textarea {
+  font-size: 1.1rem;
+  font-family: "serif";
+  border-radius: 0.2rem;
+  border: 0.1rem solid lightgray;
+}
+label {
+  padding-left: 0.5rem;
+}
+textarea {
+  resize: none;
+  width: 80%;
+  height: 7rem;
+}
+/******************** Responsive Formulaire d'Inscription *******************/
+@media all and (max-width: 955px) {
+  .parent {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+  .div7 {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .div8 {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  .div9 {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  .div10 {
+    grid-area: 4 / 1 / 5 / 2;
+  }
+  .div11 {
+    grid-area: 5 / 1 / 6 / 2;
+  }
+  .div12 {
+    grid-area: 6 / 1 / 7 / 2;
+  }
+  .div13 {
+    grid-area: 7 / 1 / 8 / 2;
+  }
+  .div14 {
+    grid-area: 8 / 1 / 9 / 2;
+  }
+  .div15 {
+    grid-area: 9 / 1 / 10 / 2;
+  }
+  .div16 {
+    grid-area: 10 / 1 / 11 / 2;
+  }
+  .div7 #nom,
+  .div8 #prenom,
+  .div11 #adresse,
+  .div12 #codepostal,
+  .div14 #email {
+    height: 1.6rem;
+  }
+  .div7 #nom,
+  .div8 #prenom {
+    width: 10rem;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .div7 label {
+    margin-right: 1.3rem;
+  }
+  .div9 #age {
+    width: 3rem;
+  }
+  .div9 label {
+    margin-left: 0.5rem;
+  }
+  .div10 label {
+    margin-left: 1rem;
+  }
+  .div11 #adresse {
+    width: 10rem;
+  }
+  .div11 label {
+    margin-right: 0.3rem;
+  }
+  .div12 #codepostal {
+    width: 6rem;
+  }
+  .div12 label {
+    margin-left: 0.2rem;
+  }
+  .div13 #pays {
+    margin-top: -1.6rem;
+  }
+  .div13 label {
+    margin-left: 0.5rem;
+  }
+  .div14 #email {
+    width: 10rem;
+  }
+  .div16 #votreMessage {
+    margin-bottom: 3rem;
+  }
+}
+/******************* Formulaire Validation ********************/
+.formulaire_inscription-validation {
+  position: relative;
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formulaire-validation {
+  text-align: center;
+  width: 70%;
+  height: 100%;
+  display: grid;
+}
+.child-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(0.5rem);
+}
+.div17 {
+  grid-area: 1 / 1 / 2 / 2;
+  padding-top: 2rem;
+}
+.div18 {
+  grid-area: 1 / 2 / 2 / 3;
+  padding-top: 2rem;
+}
+.div19 {
+  grid-area: 2 / 1 / 3 / 3;
+  text-align: center;
+}
+.div17 label,
+.div18 label {
+  font-size: 1.4rem;
+  margin-top: 15rem;
+}
+.div17 #pseudo,
+.div18 #pass {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 12rem;
+}
+.div19 input[type="submit"] {
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: inline-block;
+}
+/******************* Responsive Formulaire Validation ********************/
+@media all and (max-width: 955px) {
+  .child-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+  .div17 {
+    grid-area: 1 / 1 / 2 / 2;
+    text-align: center;
+  }
+  .div17 label {
+    margin-right: 1.2rem;
+  }
+  .div18 {
+    grid-area: 2 / 1 / 3 / 2;
+    text-align: center;
+  }
+  .div19 {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+}
+/***************** Page renvoye-mot-de-passe *****************/
+.renvoye-mot-de-passe {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mot-de-passe {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+form .div18 #email {
+  height: 3rem;
+}
+.div18,
+.div19 {
+  margin: 1.5rem;
+}
+/***************** Bouton retour *****************/
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lobster Two", cursive;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+.btn a {
+  background: transparent;
+  backdrop-filter: blur(0.5rem);
+}
+
+.btn a:hover {
+  color: white;
+  transform: scale(1.1);
+  background-color: grey;
+  box-shadow: inset 0.2rem 0.2rem 0.2rem rgb(77, 77, 77);
+}
+.btn > a {
+  display: inline-block;
+  width: 10%;
+  margin-top: 5%;
+  padding: 0.5rem;
+  text-align: center;
+  border: 0.1rem solid seashell;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: 0.4s ease;
+  text-decoration: none;
+  color: black;
+}
+@media all and (max-width: 955px) {
+  .btn > a {
+    width: 25%;
+  }
+}
+/****************** Footer ****************/
+footer {
+  margin-top: 10rem;
+  width: 100%;
+  height: 50px;
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>TP de formulaire d'inscription </title>
+        <link rel="stylesheet" href="style2.css">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+       
+    </head>
+
+    <body>
+        <video class="video" autoplay muted loop>
+            <source src=".//asset/Ocean_62249.mp4" type="video/mp4">
+        </video>
+        <h1>Formulaire d'inscription</h1>
+            <div>
+                <div class="inscription">
+                    <fieldset class="formulaire_inscription">
+                        <legend>Formulaire d'inscription</legend>
+                            <form action="form.php" method="post" autocomplete="on">
+                                <div class="parent">
+                                    <div class="div7">
+                                        <label for="nom">Nom :</label>
+                                        <input  type="text" name="nom" id="nom" required placeholder="Nom" autofocus> 
+                                    </div>
+                                    <div class="div8">
+                                        <label for="prenom">Prenom :</label>
+                                        <input type="text" name="prenom" id="prenom" required placeholder="Prenom"> 
+                                    </div>
+                                    <div class="div9">
+                                        <label for="age">Age :</label>
+                                        <input type="number" id="age" name="age"> 
+                                    </div>
+                                    <div class="div10">
+                                        <label for="H">Homme</label>
+                                            <input type="radio" id="H" name="sexe" value="Homme"> 
+                                        <label for="F" class="F">Femme</label>
+                                            <input type="radio" id="F" name="sexe" value="Femme">
+                                    </div> 
+                                    <div class="div11">
+                                        <label for="adresse">Adresse :</label>
+                                        <input type="text" name="adresse" id="adresse" placeholder="Adresse"> 
+                                    </div>
+                                    <div class="div12">
+                                        <label for="codepostal">Code postal :</label>
+                                        <input type="text" name="codepostal" id="codepostal" placeholder="Codepostal"> 
+                                    </div>
+                                    <div class="div13">
+                                        <label for="pays">Pays :</label>
+                                            <select name="pays" id="pays">
+                                                <optgroup label="Europe"></optgroup>
+                                                    <option value="France">France</option>
+                                                    <option value="Belgique">Belgique</option>
+                                                    <option value="Allemagne">Allemagne</option>
+                                                    <option value="Luxembourg">Luxembourg</option>
+                                                    <option value="Pays-Bas">Pays-Bas</option>
+                                                    <option value="Espagne">Espagne</option>
+                                                    <option value="Italie">Italie</option>
+                                                <optgroup label="Amerique"></optgroup>
+                                                    <option value="Colorado">Colorado</option>
+                                                    <option value="Missouri">Missouri</option>
+                                                    <option value="Mississipi">Mississipi</option>
+                                                    <option value="Ohio">Ohio</option>
+                                                    <option value="Tennessee">Tennessee</option>
+                                                <optgroup label="Afrique"></optgroup>
+                                                    <option value="Algerie">Algerie</option>
+                                                    <option value="Madagascar">Madagascar</option>
+                                                    <option value="Maroc">Maroc</option>
+                                                    <option value="Tunisie">Tunisie</option>
+                                                <optgroup label="Asie"></optgroup>
+                                                    <option value="Japon">Japon</option>
+                                                    <option value="Chine">Chine</option>
+                                                    <option value="Inde">Inde</option>
+                                                    <option value="Philippines">Philippines</option>
+                                            </select> 
+                                    </div>
+                                    <div class="div14">
+                                        <label for="email">Votre email :</label>
+                                        <input type="email" id="email" required placeholder="Votre email" pattern=".+@." size="30"> 
+                                    </div>
+                                    <div class="div15">
+                                         <label for="votreMessage">Votre message :</label>
+                                    </div>
+                                    <div class="div16">
+                                        <textarea name="votre message" id="votreMessage" required placeholder="Votre message" maxlength="300"></textarea>
+                                    </div>
+                                </div>
+                            </form>
+                        </fieldset>
+                    </div>
+                    <div class="formulaire_inscription-validation">
+                        <fieldset class="formulaire-validation">
+                            <legend>Créez</legend>
+                                <form action="form.php" method="post" >
+                                    <div class="child-2">
+                                        <div class="div17"><label for="pseudo" >Pseudo :</label>
+                                            <input type="text" name="pseudo" id="pseudo" minlength="5" placeholder="Pseudo" required>
+                                         </div>
+                                        <div class="div18"><label for="pass" >Password :</label>
+                                            <input type="password" name="pass" id="pass" minlength="8" placeholder="Password" required> 
+                                        </div>
+                                        <div class="div19"><input type="submit" value="Envoyer"> 
+                                        </div>
+                                    </div>
+                                </form>
+                        </fieldset>
+                    </div>
+                </div>           
+            <footer>
+                 <Span><i class="fas fa-copyright"></i> 2021 - Xavier Bastard-Rosset -</Span>
+           </footer>
+    </body>
+</html>

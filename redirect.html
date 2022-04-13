@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>TP de formulaire d'inscription </title>
+        <link rel="stylesheet" href="style2.css">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+       
+    </head>
+    <body>
+        <video class="video" autoplay muted loop>
+            <source src=".//asset/Ocean_62249.mp4" type="video/mp4">
+        </video>
+        <h1 class="accueil">Welcome</h1>
+            <div class="inscription_formulaire-identication">
+                <div class="blur">
+                    <h2>Identifiez-vous</h2>
+                        <form action="form.php" method="post" class="child">
+                            <div class="div1">
+                                <i class="fas fa-user"></i>
+                                <label for="Identifiant"  > </label>
+                                <input type="text" name="Identifiant" id="Identifiant" placeholder="Identifiant" required>
+                            </div>
+                            <div class="div2">
+                                <label for="password" ><i class="fas fa-lock"></i></label> 
+                                <input type="password" name="password" id="password" placeholder="Password" minlength="5" required>
+                            </div>
+                            <div class="div3"> 
+                                <input type="checkbox" name="checkbox" id="checkbox">
+                                <label class="remeber">Se souvenir de moi</label>
+                            </div>
+                            <div class="div4">
+                                <a href="Retrouve-mot-depasse.html">Mot de passe oublié ?</a>
+                            </div>
+                            <div class="div5">
+                                <input type="submit" value="Envoyer"> 
+                            </div>
+                            <div class="div6">
+                                <a href="/prj-formulaire/formulaire-inscription.html">Pas encore membre ?</a> 
+                            </div>
+                        </form> 
+                </div>
+            </div> 
+        <footer id="accueil">
+            <ul>
+                <li><a href="#" target="_blank"></a>
+                        <i class="fab fa-facebook-square" style="--btn : #3b5998"></i>
+                    </li>
+                <li><a href="#" target="_blank"></a>
+                        <i class="fab fa-whatsapp" style="--btn: #25D366"></i>
+                    </li>
+                <li><a href="#" target="_blank"></a>
+                        <i class="fab fa-instagram" style="--btn: #C13584"></i>
+                    </li>
+                <li><a href="#" target="_blank"></a>
+                        <i class="fab fa-twitter" style="--btn: #1da1f2"></i>
+                    </li>
+            </ul>
+        </footer>    
+    </body>
+</html>
